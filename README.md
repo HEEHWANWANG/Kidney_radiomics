@@ -26,7 +26,7 @@ For running iPython notebook ("kidney_radiomics.ipynb"), use "kidney_radiomics.y
 # Usage 
 ## 1. Performing Feature Extraction with a stand alone python script 
 ```
-$python3 feature_extraction.py 
+$python3 feature_extraction.py --n_process 4 --param_config /Users/wangheehwan/Desktop/kidney_radiomics/pipeline/params/Params2.yaml --nifti_Dir /Users/wangheehwan/Desktop/kidney_radiomics/NifTi --mask_Dir /Users/wangheehwan/Desktop/kidney_radiomics/Segmentation --save_Dir /Users/wangheehwan/Desktop/kidney_radiomics/pipeline/result
 ```  
   
 ## 2. Running code blocks in iPython notebook while skipping Feature Extraction stage
