@@ -2,7 +2,7 @@
 There are some reasons that you should perform **Feature Extraction** stage with a python script named "feature_extraction.py".  
   
 ## 1. Incompatible Dependency 
-If you running ipython notebook ("pyRadiomics.ipynb") with only python version 3.7 and install pyradiomics, you could perform **Feature Extraction** stage with iPython notebook.  
+If you running iPython notebook ("kidney_radiomics.ipynb") with only python version 3.7 and install pyradiomics, you could perform **Feature Extraction** stage with iPython notebook.  
   
 However, sklearn version 1.1+, which could be only compatible with only python 3.8+, only support ```n_features_to_select='auto'``` option in sklearn.feature_selection.SequentialFeatureSelector.  
   
@@ -14,13 +14,19 @@ It's because iPython notebook do not support multiprocess which could dramatical
   
 Performing **Feature Extraction** stage with a single process require too long time to extract radiomics features. 
   
-Thus, it is highly recommend to perform **Feature Extraction** with a python script named "feature_extraction.py" before running code blocks in iPython notebook ("pyRadiomics.ipynb").  
+Thus, it is highly recommend to perform **Feature Extraction** with a python script named "feature_extraction.py" before running code blocks in iPython notebook ("kidney_radiomics.ipynb").  
 
+
+# Environment (anaconda)  
+For **Feature Extraction** stage, use "feature_extracion.yml" which based on ```python == 3.7``` and contain *pyradiomics* python module.  
   
+For running iPython notebook ("kidney_radiomics.ipynb"), use "kidney_radiomics.yml" which based on ```python >= 3.8``` and contain ```scikit-learn >= 1.1.0```.
+  
+
 # Usage 
 ## 1. Performing Feature Extraction with a stand alone python script 
 ```
-$python3 feature_extraction.py
+$python3 feature_extraction.py 
 ```  
   
 ## 2. Running code blocks in iPython notebook while skipping Feature Extraction stage
